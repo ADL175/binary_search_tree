@@ -9,9 +9,11 @@ The Big O time complexity is O(1).
 
 # trie
 
+
 Trie and Tests created by David Lim and Elyanil Castro
 
 Tries uses: -insert(self, string): will insert the input string into the trie. If character in the input string is already present, it will be ignored.
+
 
 -contains(self, string): will return True if the string is in the trie, False if not.
 
@@ -20,7 +22,6 @@ Tries uses: -insert(self, string): will insert the input string into the trie. I
 -remove(self, string): will remove the given string from the trie. If the word doesn’t exist, will raise an appropriate exception.
 
 Big O(N) time complexity N = len(word inserted into the Trie) space complexity = Big O(N)
-
 
 
 
