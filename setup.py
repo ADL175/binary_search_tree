@@ -11,7 +11,7 @@ setup(
     name="Data Structs",
     description="Contains Python data structure and algorithm implementations",
     version=0.1,
-    author="Kurt Maurer" "James Feore" "David Lim",
+    author="Kurt Maurer" "James Feore" "David Lim" "Elyanil Castro",
     author_email="",
     license="MIT",
     py_modules=[],
