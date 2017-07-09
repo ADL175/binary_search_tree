@@ -1,5 +1,4 @@
-"""Implement a hash table in Python.
-Worked with Kurt Maurer and James Feore on this lab."""
+"""Implement a hash table in Python."""
 
 from store_bst import BinTree
 
@@ -21,7 +20,7 @@ class HashTable(object):
             raise ValueError("Size must be >= 512.")
         else:
             self.table = [None] * size
-        if hash_function == complex:
+        if hash_function == 'complex':
             self.hash_function = 1
         elif hash_function == 'naive':
             self.hash_function = 2
@@ -77,10 +76,10 @@ class HashTable(object):
             return self._naive_hash(key)
 
 
-# if __name__ == '__main__':  # pragma: no cover
-#     poo = HashTable(hash_function='naive')
-#     print(poo.set("poop", "poop"))
-#     print(poo.set("soup", "soup"))
-#     print(poo.get("poop"))
-#     print(poo.get("soup"))
-#     # poo.get("poop")
+if __name__ == '__main__':  # pragma: no cover
+    poo = HashTable(hash_function='complex')
+    print(poo.set("poop", "poop"))
+    print(poo.set("soup", "soup"))
+    print(poo.get("poop"))
+    print(poo.get("soup"))
+    # poo.get("poop")
