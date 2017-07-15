@@ -163,7 +163,6 @@ class Trie(object):
 
     # import random
     #
-    #
     # with open('/usr/share/dict/words') as dictionary:
     #     words = dictionary.read()
     #
