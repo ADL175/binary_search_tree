@@ -120,7 +120,7 @@ class Trie(object):
         return current if current.is_end else None
 
     def traversal_helper(self, root, start=""):
-        # root = self._root
+        """helper function for traversal."""
         words = []
         previous = start
         if root is not None and root.val is not None:
@@ -134,6 +134,7 @@ class Trie(object):
         return words
 
     def traversal(self, val=""):
+        """traverse the trie and return all words."""
         return self.traversal_helper(self._root, val)
 
 if __name__ == '__main__':  # pragma: no cover
