@@ -24,7 +24,7 @@ def test_insert():
 
 @pytest.mark.parametrize('word', RANDOM_WORDS)
 def test_contains(word):
-    """."""
+    """tests contains method."""
     from trie import Trie
     test_Trie = Trie(RANDOM_WORDS)
     for i in RANDOM_WORDS:
@@ -33,7 +33,7 @@ def test_contains(word):
 
 @pytest.mark.parametrize('word', RANDOM_WORDS)
 def test_removes(word):
-    """."""
+    """tests the remove method."""
     from trie import Trie
     test_Trie = Trie(RANDOM_WORDS)
     assert test_Trie.remove(RANDOM_WORDS[1]) is True
@@ -43,7 +43,14 @@ def test_removes(word):
 
 @pytest.mark.parametrize('word', RANDOM_WORDS)
 def test_size(word):
-    """."""
+    """tests the size method."""
     from trie import Trie
     test_Trie = Trie(RANDOM_WORDS)
     assert test_Trie.size() == 500
+
+
+def test_traversal():
+    """Test traversal method."""
+    from trie import Trie
+    test_Trie = Trie(["word", "wordy", "bird", "words"])
+    assert test_Trie.traversal() == ['word', 'wordy', 'words', 'bird']
