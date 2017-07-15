@@ -1,10 +1,14 @@
 #Insertion Sort
 
+w/ Elyanil Castro
 insertion_sort.py includes: Insertion sort; is a simple sorting algorithm that builds the final sorted array (or list) one item at a time. - Wikipedia
+Time Complexity Big O (N^2)
 
 #Bubble Sort
 
+w/ Elyanil Castro
 bubble.py contains bubble sort function.
+Time Complexity Big O (N^2)
 
 #HashTable
 
