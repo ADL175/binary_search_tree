@@ -1,3 +1,10 @@
+#Radix Sort
+
+w/ Elyanil Castro
+radix.py includes radix sort is a non-comparative integer sorting algorithm that sorts data with integer keys by grouping keys by the individual digits which share the same significant position and value. - Wikipedia
+
+Time complexity Big O (N*K)
+
 #Quick Sort
 
 w/ Elyanil Castro
