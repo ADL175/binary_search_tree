@@ -1,3 +1,10 @@
+#Quick Sort
+
+w/ Elyanil Castro
+quick_sort.py includes: quick sort; is an efficient sorting algorithm, serving as a systematic method for placing the elements of an array in order. - Wikipedia
+
+Time complexity Big O (log N)
+
 #Merge Sort
 
 w/ Elyanil Castro
