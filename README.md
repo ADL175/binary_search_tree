@@ -1,6 +1,23 @@
+#Merge Sort
+
+w/ Elyanil Castro
+merge.py includes: Merger Sort; is an efficient, general-purpose, comparison-based sorting algorithm. Most implementations produce a stable sort, which means that the implementation preserves the input order of equal elements in the sorted output. - Wikipedia
+
+Time complexity Big O (log N)
+
+#Insertion Sort
+
+w/ Elyanil Castro
+insertion_sort.py includes: Insertion sort; is a simple sorting algorithm that builds the final sorted array (or list) one item at a time. - Wikipedia
+
+Time complexity Big O (N^2)
+
 #Bubble Sort
 
+w/ Elyanil Castro
 bubble.py contains bubble sort function.
+
+Time complexity Big (N^2)
 
 #HashTable
 
