@@ -137,11 +137,11 @@ class Trie(object):
         """traverse the trie and return all words."""
         return self.traversal_helper(self._root, val)
 
-if __name__ == '__main__':  # pragma: no cover
-    poo = Trie(["word", "wordy", "words", "bird", "birdy", "birds"])
-    print(poo.contains("word"))
-    print(poo.remove("wordy"))
-    print(poo.contains("wordy"))
-    print(poo.contains("word"))
-    poo.insert("wordy")
-    print(poo.traversal(""))
+# if __name__ == '__main__':  # pragma: no cover
+#     poo = Trie(["word", "wordy", "words", "bird", "birdy", "birds"])
+#     print(poo.contains("word"))
+#     print(poo.remove("wordy"))
+#     print(poo.contains("wordy"))
+#     print(poo.contains("word"))
+#     poo.insert("wordy")
+#     print(poo.traversal(""))
