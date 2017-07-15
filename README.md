@@ -1,6 +1,9 @@
 #Bubble Sort
 
+w/ Elyanil Castro
 bubble.py contains bubble sort function.
+
+Time Complexity Big O(N^2)
 
 #HashTable
 
