@@ -54,3 +54,11 @@ def test_traversal():
     from trie import Trie
     test_Trie = Trie(["word", "wordy", "bird", "words"])
     assert test_Trie.traversal() == ['word', 'wordy', 'words', 'bird']
+
+
+def test_autocomplete():
+    """Test autocomplete method."""
+    from trie import Trie
+    test_Trie = Trie(["word", "wordy", "bird", "words"])
+    assert test_Trie.autocomplete("wo") == ['word', 'wordy', 'words']
+    assert test_Trie.autocomplete("b") == ['bird']

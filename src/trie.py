@@ -84,7 +84,7 @@ class Trie(object):
         if self.contains(val):
             if len(val) == 0:
                 return 'That is an empty string!'
-            terminal_node = self.find_terminal_node(val)
+            terminal_node = self.find_end_node(val)
             if terminal_node is not None:
                 if not terminal_node.has_children:
                     self.remove_word_ending_with_node(terminal_node)
@@ -94,10 +94,6 @@ class Trie(object):
             return True
         else:
             return "The word: {} is not in Trie, nothing to delete.".format(val)
-
-    def find_terminal_node(self, val):
-        """Helper for remove method, locates last node of val."""
-        return self.find_end_node(val)
 
     def remove_word_ending_with_node(self, val):
         """Helper for remove method, removes the word."""
@@ -111,13 +107,13 @@ class Trie(object):
                 break
 
     def find_end_node(self, val):
-        """Helper for find_terminal_node."""
+        """Helper for find_end_node."""
         current = self._root
         current_index = 0
         while current_index < len(val):
             current = current.children[val[current_index]]
             current_index += 1
-        return current if current.is_end else None
+        return current
 
     def traversal_helper(self, root, start=""):
         """helper function for traversal."""
@@ -137,11 +133,46 @@ class Trie(object):
         """traverse the trie and return all words."""
         return self.traversal_helper(self._root, val)
 
+    def autocomplete(self, val):
+        """Autocomplete method for trie."""
+        try:
+            temp_list = []
+            val = val.lower()
+            end_of_word = self.find_end_node(val)
+            if end_of_word:
+                if end_of_word.is_end:
+                    temp_list.append(val)
+                for child in end_of_word.children.values():
+                    word = self.traversal_helper(child, val)
+                    temp_list.extend(word)
+            return temp_list
+        except KeyError:
+            print("Word doesn't exist")
+
+
 # if __name__ == '__main__':  # pragma: no cover
-#     poo = Trie(["word", "wordy", "words", "bird", "birdy", "birds"])
-#     print(poo.contains("word"))
-#     print(poo.remove("wordy"))
-#     print(poo.contains("wordy"))
-#     print(poo.contains("word"))
-#     poo.insert("wordy")
-#     print(poo.traversal(""))
+    # poo = Trie(["word", "wordy", "words", "bird", "birdy", "birds"])
+    # print(poo.contains("word"))
+    # print('remove', poo.remove("wordy"))
+    # print(poo.contains("wordy"))
+    # print(poo.contains("word"))
+    # # poo.insert("wordy")
+    # print(poo.traversal(""))
+    # print(poo.autocomplete("w"))
+
+
+    # import random
+    #
+    # with open('/usr/share/dict/words') as dictionary:
+    #     words = dictionary.read()
+    #
+    # words = words.lower()
+    # list_words = words.split('\n')
+
+    # RANDOM_WORDS = random.sample(list_words, 1000)
+
+    # test_Trie = Trie()
+    # for i in list_words:
+    #     test_Trie.insert(i)
+    # print(test_Trie.size())
+    # print(test_Trie.autocomplete('tsa'))
