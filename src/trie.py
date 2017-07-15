@@ -119,11 +119,28 @@ class Trie(object):
             current_index += 1
         return current if current.is_end else None
 
-#
-# if __name__ == '__main__':  # pragma: no cover
-#     poo = Trie(["word", "wordy", "words", "bird", "birdy", "birds"])
-#     print("poo.contains("word")"poo.contains("word"))
-#     print(poo.remove("wordy"))
-#     print(poo.contains("wordy"))
-#     print(poo.contains("word"))
-#     poo.insert("wordy")
+    def traversal_helper(self, root, start=""):
+        # root = self._root
+        words = []
+        previous = start
+        if root is not None and root.val is not None:
+            previous += root.val
+            if root.is_end:
+                words.append(previous)
+        for child in root.children.values():
+            if child:
+                temp = self.traversal_helper(child, previous)
+                words.extend(temp)
+        return words
+
+    def traversal(self, val=""):
+        return self.traversal_helper(self._root, val)
+
+if __name__ == '__main__':  # pragma: no cover
+    poo = Trie(["word", "wordy", "words", "bird", "birdy", "birds"])
+    print(poo.contains("word"))
+    print(poo.remove("wordy"))
+    print(poo.contains("wordy"))
+    print(poo.contains("word"))
+    poo.insert("wordy")
+    print(poo.traversal(""))
