@@ -1,3 +1,7 @@
+#Bubble Sort
+
+bubble.py contains bubble sort function.
+
 #HashTable
 
 Hash table data structure, partnered with James Feore and Kurt Maurer
@@ -18,6 +22,10 @@ Tries uses: -insert(self, string): will insert the input string into the trie. I
 -size(self): will return the total number of words contained within the trie. 0 if empty.
 
 -remove(self, string): will remove the given string from the trie. If the word doesn’t exist, will raise an appropriate exception.
+
+-traversal returns list of all words
+
+-autocomplete takes argument and returns autocomplete words.
 
 Big O(N) time complexity N = len(word inserted into the Trie) space complexity = Big O(N)
 
