@@ -1,44 +1,45 @@
 """Implement an radix sort."""
 
 import sys
+import math
 
 
-def radix_sort(array_of_stuff):
-    """Radix sort function"""
-    if not all(isinstance(n, int) for n in array_of_stuff):
-        return
-    if len(array_of_stuff) == 0:
-        return
-    if len(array_of_stuff) < 2:
-        return array_of_stuff
-    positive_nums = list(filter(lambda x: x >= 0, array_of_stuff))
-    array_of_stuff = list(filter(lambda x: x < 0, array_of_stuff))
-    print(positive_nums, array_of_stuff)
-    def sort_func(nums):
-        """helper for radix."""
-        is_sorted = False
-        temp = 0
-        divisor = 1
-        buckets = [[]]*10
-        while not is_sorted:
-            is_sorted = True
-            for num in nums:
-                temp = abs(int(num/divisor))
-                buckets[temp % 10].append(num)
-                import pdb; pdb.set_trace()
-                if is_sorted and temp > 0:
-                    is_sorted = False
-            idx = 0
-            for i in range(0, 9):
-                for num in buckets[i]:
-                    nums[idx] = num
-                    idx += 1
-                buckets[i] = []
-            divisor *= 10
+def radix_sort(iter):
+    """Sort the interable using the radix sort method."""
+    if not isinstance(iter,(list, tuple)):
+        raise TypeError("Input only a list/tuple of integers")
+    if not all(isinstance(x, (int, float)) for x in iter):
+        raise ValueError("Input only a list/tuple of integers")
 
-    sort_func(positive_nums)
-    sort_func(array_of_stuff)
-    array_of_stuff.extend(positive_nums)
+    places = 0
+    for num in iter:
+        digits = num_digits(num)
+        if digits > places:
+            places = digits
+
+    for place in range(1, places + 1):
+        bucket = [[], [], [], [], [], [], [], [], [], []]
+        for num in iter:
+            digit = get_digit(num, place + 1)
+            bucket[digit].append(num)
+        iter = []
+        for sub in bucket:
+            for number in sub:
+                iter.append(number)
+    return iter
+
+
+def get_digit(num, place):
+    """Return the place-th digit of num."""
+    return int(num / 10 ** (place - 1)) % 10
+
+
+def num_digits(num):
+    """Give the length of a given number."""
+    if num > 0:
+        return int(math.log10(num)) + 1
+    elif num == 0:
+        return 1
 
 
 if __name__ == '__main__':
