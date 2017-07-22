@@ -1,4 +1,4 @@
-"""pytest for insertion sort."""
+"""pytest for insertion sort, partnered with Elyanil Castro."""
 
 from insertion import insertion_sort
 import pytest
