@@ -1,4 +1,6 @@
-"""Test our self-balancing methods."""
+"""Test our self-balancing methods.
+Binary Search Tree Tests partnered with Kurt Maurer and James Feore.
+"""
 
 
 import pytest
