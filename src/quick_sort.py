@@ -1,4 +1,4 @@
-"""Implement an quick sort."""
+"""Implement an quick sort, partnered w/ Elyanil Castro."""
 
 import sys
 from random import randint
