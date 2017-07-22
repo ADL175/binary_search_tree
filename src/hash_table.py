@@ -1,4 +1,6 @@
-"""Implement a hash table in Python."""
+"""Implement a hash table in Python.
+Partnered with Elyanil, James Feore and Kurt Maurer
+"""
 
 from store_bst import BinTree
 
