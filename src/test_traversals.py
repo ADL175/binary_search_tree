@@ -1,4 +1,4 @@
-"""Test our traversal functions."""
+"""Test our traversal functions. w/ Erik Enderlein, James Feore and Kurt Maurer"""
 
 import pytest
 
