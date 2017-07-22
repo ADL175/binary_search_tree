@@ -1,4 +1,4 @@
-"""pytest for merge sort."""
+"""pytest for merge sort, partnered w/ Elyanil Castro."""
 
 from merge import merge_sort
 import pytest
