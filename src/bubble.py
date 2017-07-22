@@ -1,4 +1,6 @@
-"""Implement a bubble sort."""
+"""Implement a bubble sort.
+I worked with Elyanil Castro.
+"""
 
 import sys
 
