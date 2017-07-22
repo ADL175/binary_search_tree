@@ -1,5 +1,5 @@
 
-"""Helper data structures for Trie traversal."""
+"""Helper data structures for Trie traversal, worked with Erik Enderlein on this."""
 
 
 class Node(object):  #pragma no cover
