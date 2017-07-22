@@ -1,4 +1,4 @@
-"""pytest for bubble sort."""
+"""pytest for bubble sort, partnered with Elyanil Castro."""
 
 from bubble import bubble_sort
 import pytest
