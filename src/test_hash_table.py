@@ -1,4 +1,7 @@
-"""Test our implementation of hash table using a large dictionary of words."""
+"""Test our implementation of hash table using a large dictionary of words
+Hash table data structure, partnered with James Feore and Kurt Maurer.
+
+"""
 import pytest
 import random
 
