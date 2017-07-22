@@ -1,4 +1,4 @@
-"""pytest for quick sort."""
+"""pytest for quick sort, w/ Elyanil Castro."""
 
 from quick_sort import quick_sort
 import pytest
