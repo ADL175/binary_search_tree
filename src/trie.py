@@ -1,4 +1,4 @@
-"""Create a trie data structure."""
+"""Create a trie data structure, with Elyanil Castro."""
 
 
 class Node(object):
