@@ -1,4 +1,6 @@
-"""Implement Binary Search Tree."""
+"""Implement Binary Search Tree.
+I worked with Elyanil Castro, Kurt Maurer and James Feore.
+"""
 
 
 class Node(object):
