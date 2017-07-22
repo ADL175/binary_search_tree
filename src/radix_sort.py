@@ -1,4 +1,4 @@
-"""Implement an radix sort."""
+"""Implement an radix sort, worked with Kurt Maurer and James Feore."""
 
 import sys
 import math
