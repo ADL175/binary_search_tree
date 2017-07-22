@@ -1,4 +1,6 @@
-"""Implement an insertion sort."""
+"""Implement an insertion sort.
+partnered with w/ Elyanil Castro
+"""
 
 import sys
 
