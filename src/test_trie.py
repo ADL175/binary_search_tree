@@ -1,4 +1,4 @@
-"""Tests Trie functionality using dictionary of words."""
+"""Tests Trie functionality using dictionary of words, with Elyanil Castro."""
 
 import pytest
 import random
