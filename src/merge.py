@@ -1,4 +1,4 @@
-"""Implement an merge sort."""
+"""Implement an merge sort, partnered with Elyanil Castro ."""
 
 import sys
 
